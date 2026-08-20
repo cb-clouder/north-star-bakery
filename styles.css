@@ -1,0 +1,297 @@
+:root {
+  --cream: #fff8f0;
+  --brown: #6b3e26;
+  --peach: #d88c5a;
+  --charcoal: #2f2a26;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--cream);
+  color: var(--charcoal);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: var(--brown);
+  border-bottom: 0.4rem solid var(--peach);
+}
+
+.site-logo {
+  width: 11rem;
+  max-width: 100%;
+  height: auto;
+  background-color: var(--cream);
+  border-radius: 0.75rem;
+}
+
+nav {
+  width: 100%;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav a {
+  display: block;
+  padding: 0.7rem 1rem;
+  border: 2px solid transparent;
+  border-radius: 0.4rem;
+  color: var(--cream);
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  border-color: var(--cream);
+  background-color: var(--peach);
+  color: var(--charcoal);
+  outline: none;
+}
+
+nav a[aria-current="page"] {
+  background-color: var(--cream);
+  color: var(--brown);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: min(100% - 2rem, 70rem);
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+  color: var(--brown);
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.2;
+}
+
+h1 {
+  margin-bottom: 0;
+  font-size: 2.1rem;
+}
+
+h2 {
+  font-size: 1.55rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+p,
+ul,
+address {
+  margin-top: 0;
+}
+
+a {
+  color: var(--brown);
+  font-weight: bold;
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--charcoal);
+}
+
+section,
+.card {
+  padding: 1.25rem;
+  border-left: 0.35rem solid var(--peach);
+  border-radius: 0.4rem;
+  background-color: var(--cream);
+  box-shadow: 0 0.2rem 0.8rem rgb(47 42 38 / 15%);
+}
+
+.featured-section {
+  border: 0.2rem solid var(--peach);
+}
+
+img,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.4rem;
+}
+
+picture img,
+.product-image {
+  width: 100%;
+}
+
+figure {
+  margin: 0;
+}
+
+figure img {
+  width: 100%;
+}
+
+figcaption {
+  padding: 0.75rem;
+  background-color: var(--brown);
+  color: var(--cream);
+  font-style: italic;
+}
+
+audio,
+video {
+  width: 100%;
+}
+
+.card-grid,
+.product-grid,
+.staff-grid,
+.contact-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.card-grid > section,
+.product-grid > section,
+.staff-grid > article,
+.contact-layout > section {
+  flex: 1;
+}
+
+.staff-grid article {
+  padding: 1rem;
+  border-top: 0.25rem solid var(--peach);
+  background-color: var(--cream);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  border: 0.15rem solid var(--peach);
+}
+
+legend {
+  padding: 0 0.4rem;
+  color: var(--brown);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.15rem;
+  font-weight: bold;
+}
+
+label {
+  font-weight: bold;
+}
+
+input,
+select,
+textarea,
+button {
+  width: 100%;
+  padding: 0.7rem;
+  border: 0.12rem solid var(--brown);
+  border-radius: 0.3rem;
+  background-color: var(--cream);
+  color: var(--charcoal);
+  font: inherit;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 0.2rem solid var(--peach);
+  outline-offset: 0.1rem;
+}
+
+button {
+  background-color: var(--brown);
+  color: var(--cream);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover,
+button:focus-visible {
+  background-color: var(--peach);
+  color: var(--charcoal);
+}
+
+footer {
+  padding: 1.25rem;
+  background-color: var(--charcoal);
+  color: var(--cream);
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+}
+
+@media (min-width: 48rem) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+  }
+
+  nav {
+    width: auto;
+  }
+
+  nav ul {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  main {
+    gap: 2rem;
+    padding: 3rem 0;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  .card-grid,
+  .product-grid,
+  .staff-grid,
+  .contact-layout {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .contact-layout > section:first-child {
+    flex: 2;
+  }
+}
