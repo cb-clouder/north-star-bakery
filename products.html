@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>North Star Bakery | Products</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
   <header>
@@ -49,6 +50,18 @@
       <p>Our custom cakes are available in vanilla, chocolate, and seasonal flavors. Prices generally range from $35 for a small cake to $120 or more for larger decorated orders. Please submit requests at least seven days before your preferred pickup date.</p>
     </section>
     </div>
+
+    <section class="favorites-section" aria-labelledby="favorites-heading">
+      <h2 id="favorites-heading">Save Your Bakery Favorites</h2>
+      <p>Choose items you may want to pre-order. Your selections are saved in this browser so they will still be here when you return.</p>
+      <div id="favorite-options" class="favorite-options" aria-describedby="favorites-status"></div>
+      <div class="favorites-summary" aria-live="polite">
+        <h3>Your Saved Favorites</h3>
+        <p id="favorites-status">No favorites saved yet.</p>
+        <ul id="favorites-list"></ul>
+        <button id="clear-favorites" type="button" class="secondary-button" hidden>Clear Favorites</button>
+      </div>
+    </section>
 
     <section class="featured-section">
       <h2>Our Signature Loaf</h2>

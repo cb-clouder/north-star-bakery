@@ -247,6 +247,74 @@ button:focus-visible {
   color: var(--charcoal);
 }
 
+.favorites-section {
+  border: 0.2rem solid var(--peach);
+}
+
+.favorite-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.favorite-button {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  text-align: left;
+}
+
+.favorite-button[aria-pressed="true"] {
+  background-color: var(--peach);
+  color: var(--charcoal);
+}
+
+.favorite-price {
+  white-space: nowrap;
+}
+
+.favorites-summary {
+  margin-top: 1.25rem;
+  padding: 1rem;
+  border-radius: 0.4rem;
+  background-color: rgb(216 140 90 / 18%);
+}
+
+.favorites-summary h3,
+.favorites-summary p,
+.favorites-summary ul {
+  margin-bottom: 0.75rem;
+}
+
+.secondary-button {
+  width: auto;
+  background-color: var(--charcoal);
+}
+
+.field-error {
+  display: block;
+  min-height: 1.5rem;
+  color: #8a1c12;
+  font-size: 0.95rem;
+  font-weight: bold;
+}
+
+.input-error {
+  border-color: #8a1c12;
+  box-shadow: 0 0 0 0.15rem rgb(138 28 18 / 20%);
+}
+
+.form-status {
+  margin: 0;
+  font-weight: bold;
+}
+
+.form-status.success {
+  padding: 0.75rem;
+  border-left: 0.3rem solid var(--brown);
+  background-color: rgb(216 140 90 / 18%);
+}
+
 footer {
   padding: 1.25rem;
   background-color: var(--charcoal);
@@ -293,5 +361,13 @@ footer p {
 
   .contact-layout > section:first-child {
     flex: 2;
+  }
+
+  .favorite-options {
+    flex-flow: row wrap;
+  }
+
+  .favorite-button {
+    flex: 1 1 19rem;
   }
 }

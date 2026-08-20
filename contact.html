@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>North Star Bakery | Contact and Pre-Orders</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
   <header>
@@ -26,18 +27,20 @@
     <div class="contact-layout">
     <section>
       <h2>Inquiry and Pre-Order Form</h2>
-      <form action="#" method="post">
+      <form id="preorder-form" action="#" method="post" novalidate>
         <fieldset>
           <legend>Your Contact Information</legend>
 
           <p>
             <label for="name">Full name:</label><br>
             <input type="text" id="name" name="name" minlength="2" autocomplete="name" required>
+            <span class="field-error" id="name-error" aria-live="polite"></span>
           </p>
 
           <p>
             <label for="email">Email address:</label><br>
             <input type="email" id="email" name="email" autocomplete="email" required>
+            <span class="field-error" id="email-error" aria-live="polite"></span>
           </p>
         </fieldset>
 
@@ -51,16 +54,19 @@
               <option value="pre-order">Pre-order request</option>
               <option value="general-question">General question</option>
             </select>
+            <span class="field-error" id="request-type-error" aria-live="polite"></span>
           </p>
 
           <p>
             <label for="pickup-date">Preferred pickup date:</label><br>
             <input type="date" id="pickup-date" name="pickup-date" required>
+            <span class="field-error" id="pickup-date-error" aria-live="polite"></span>
           </p>
 
           <p>
             <label for="item-details">Item details:</label><br>
             <textarea id="item-details" name="item-details" rows="6" cols="45" minlength="10" required></textarea>
+            <span class="field-error" id="item-details-error" aria-live="polite"></span>
           </p>
 
           <p>
@@ -70,6 +76,7 @@
         </fieldset>
 
         <button type="submit">Submit Request</button>
+        <p id="form-status" class="form-status" aria-live="polite"></p>
       </form>
     </section>
 
